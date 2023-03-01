@@ -1,0 +1,216 @@
+$bg-1: #1a1919;
+$bg-2: #0d0c0c;
+
+$keyboard-1: #FFFFFB;
+$keyboard-2: #EAE7E5;
+$keyboard-3: #9C9C9C;
+
+$key-1: #FFFFFB;
+$key-2: #b8b8b8;
+$key-3: #838383;
+
+$blue-1: #A9DFFD;
+$blue-2: #8FD2F8;
+$blue-3: #426585;
+
+$orange-1: #FFA28E;
+$orange-2: #B46266;
+$orange-3: #8E3E43;
+
+$screen-1: #4D4A5D;
+
+
+.main{
+    margin-top: 300px;
+    transform:
+        rotateX(90deg)
+        rotateY(0deg)
+        rotateZ(0deg)
+        translate3d(-20px, 290px, 356px)
+    ;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+}
+.face{ position: absolute; }
+
+/*Base*/
+/*=================================*/
+/*=================================*/
+
+$width-kb: 200px;
+$height-kb: 90px;
+$depth-kb: 15px;
+
+.keyboard{
+    transform-style: preserve-3d;
+    width: $width-kb;
+    height: $height-kb;
+
+    &__front{
+        transform-style: preserve-3d;
+        width: $width-kb;
+        height: $depth-kb;
+        transform: rotateX(-90deg) translateZ($height-kb / 2);
+        background-color: $keyboard-3;
+    }
+    &__back{
+        transform-style: preserve-3d;
+        width: $width-kb;
+        height: $depth-kb;
+        transform: rotateX( 90deg) translateZ($height-kb / 2);
+        background-color: $keyboard-1;
+    }
+    &__top{
+        transform-style: preserve-3d;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: $width-kb;
+        height: $height-kb;
+        transform: rotateY(0deg) translateZ($depth-kb / 2);
+        background-image: linear-gradient(to bottom, lighten($blue-1, 10), lighten($bg-1, 10));
+    }
+    &__bottom{
+        transform-style: preserve-3d;
+        width: $width-kb;
+        height: $height-kb;
+        transform: rotateY(180deg) translateZ($depth-kb / 2);
+        background-color: $keyboard-2;
+    }
+    &__right{
+        transform-style: preserve-3d;
+        width: $depth-kb;
+        height: $height-kb;
+        transform: rotateY(90deg) translateZ($width-kb / 2);
+        background-color: $keyboard-1;
+    }
+    &__left{
+        transform-style: preserve-3d;
+        width: $depth-kb;
+        height: $height-kb;
+        transform: rotateY(90deg) translateZ(-$width-kb / 2);
+        background-color: $keyboard-2;
+    }
+}
+/*=================================*/
+/*=================================*/
+$width-ky: 12px;
+$height-ky: 13px;
+$depth-ky: 5px;
+
+.keys{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    transform: translateZ($depth-ky / 2);
+    padding: 0 2px;
+    transform-style: preserve-3d;
+}
+
+.key{
+    width: $width-ky;
+    height: $height-ky;
+    transform-style: preserve-3d;
+    &--w2{ width:  $width-ky * 2; }
+    &--w3{ width:  $width-ky * 3; }
+    &--w6{ width:  $width-ky * 6.5; }
+    transition: .05s ease;
+
+
+    &__front{
+        transform-style: preserve-3d;
+        width: $width-ky;
+        height: $depth-ky;
+        transform: rotateX(-90deg) translateZ($height-ky / 2);
+        background-color: $key-3;
+
+        &--w2{ width: $width-ky * 2; }
+        &--w3{ width: $width-ky * 3; }
+        &--w6{ width: $width-ky * 6.5; }
+    }
+    &__back{
+        transform-style: preserve-3d;
+        width: $width-ky;
+        height: $depth-ky;
+        transform: rotateX( 90deg) translateZ($height-ky / 2);
+        background-color: $key-1;
+
+        &--w2{ width: $width-ky * 2; }
+        &--w3{ width: $width-ky * 3; }
+        &--w6{ width: $width-ky * 6.5; }
+    }
+    &__top{
+        transform-style: preserve-3d;
+        width: $width-ky;
+        height: $height-ky;
+        transform: rotateY(0deg) translateZ($depth-ky / 2);
+        background-color: $key-1;
+        background-image: linear-gradient(to bottom, lighten($blue-1, 15)  , $key-1);
+
+
+        &--w2{ width: $width-ky * 2; }
+        &--w3{ width: $width-ky * 3; }
+        &--w6{ width: $width-ky * 6.5; }
+    }
+    &__bottom{
+        transform-style: preserve-3d;
+        width: $width-ky;
+        height: $height-ky;
+        transform: rotateY(180deg) translateZ($depth-ky / 2);
+        background-color: $key-3;
+
+        &--w2{ width: $width-ky * 2; }
+        &--w3{ width: $width-ky * 3; }
+        &--w6{ width: $width-ky * 6.5; }
+    }
+    &__right{
+        transform-style: preserve-3d;
+        width: $depth-ky;
+        height: $height-ky;
+        transform: rotateY(90deg) translateZ($width-ky / 2);
+        background-color: $key-3;
+
+        &--w2{ transform: rotateY(90deg) translateZ($width-ky);}
+        &--w3{ transform: rotateY(90deg) translateZ($width-ky * 1.5);}
+        &--w6{ transform: rotateY(90deg) translateZ($width-ky * 3.25);}
+    }
+    &__left{
+        transform-style: preserve-3d;
+        width: $depth-ky;
+        height: $height-ky;
+        transform: rotateY(90deg) translateZ(-$width-ky / 2);
+        background-image: linear-gradient(to bottom, lighten($key-2 , 5) , $key-2);
+
+        &--w2{ transform: rotateY(90deg) translateZ(-$width-ky);}
+        &--w3{ transform: rotateY(90deg) translateZ(-$width-ky * 1.5);}
+        &--w6{ transform: rotateY(90deg) translateZ(-$width-ky * 3.25);}
+    }
+}
+/*=================================*/
+/*=================================*/
+.face--key-b1{ background: $blue-1; }
+.face--key-b2{ background-image: linear-gradient(to bottom, lighten($blue-2 , 5) , $blue-2); }
+.face--key-b3{ background-color: $blue-3; }
+
+.face--key-o1{ background: $orange-1; }
+.face--key-o2{ background-image: linear-gradient(to bottom, lighten($orange-2 , 5) , $orange-2); }
+.face--key-o3{ background-color: $orange-3; }
+
+.key--down{
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateZ(-5px);
+    transition: .05s ease;
+
+    > .key__top{
+        background:  lighten($orange-1, 10);
+    }
+}

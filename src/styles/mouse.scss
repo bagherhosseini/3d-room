@@ -1,0 +1,560 @@
+.mouseContent{
+  width: 80em;
+  height: 80em;
+  top: 50%;
+  left: 50%;
+  font-size: 4.5px;
+  margin: -40em 0 0 -40em;
+  transform-style: preserve-3d;
+  transform: translate3d(450px, 170px, 305px); 
+
+  .face {
+    box-shadow: inset 0 0 0 1px rgb(29, 29, 29);
+  }
+  .scene, .shape, .face, .face-wrapper, .cr {
+    position: absolute;
+    transform-style: preserve-3d;
+  }
+  .scene {
+    
+  }
+  .shape {
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform-origin: 50%;
+    transform-style: preserve-3d;
+  }
+  .face, .face-wrapper {
+    transform-style: preserve-3d;
+    overflow: hidden;
+    transform-origin: 0 0;
+    backface-visibility: hidden;
+    /* hidden by default, prevent blinking and other weird rendering glitchs */
+  }
+  .face {
+    transform-style: preserve-3d;
+    background-size: 100% 100%!important;
+    background-position: center;
+  }
+  .face-wrapper .face {
+    left: 100%;
+    width: 100%;
+    height: 100%
+  }
+  .photon-shader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%
+  }
+  .side {
+    left: 50%;
+  }
+  .cr, .cr .side {
+    height: 100%;
+  }
+  [class*="cuboid"] .ft, [class*="cuboid"] .bk {
+    width: 100%;
+    height: 100%;
+  }
+  [class*="cuboid"] .bk {
+    left: 100%;
+  }
+  [class*="cuboid"] .rt {
+    transform: rotateY(-90deg) translateX(-50%);
+  }
+  [class*="cuboid"] .lt {
+    transform: rotateY(90deg) translateX(-50%);
+  }
+  [class*="cuboid"] .tp {
+    transform: rotateX(90deg) translateY(-50%);
+  }
+  [class*="cuboid"] .bm {
+    transform: rotateX(-90deg) translateY(-50%);
+  }
+  [class*="cuboid"] .lt {
+    left: 100%;
+  }
+  [class*="cuboid"] .bm {
+    top: 100%;
+  }
+  [class*="cylinder"] .tp {
+    transform: rotateX(90deg) translateY(-50%);
+  }
+  [class*="cylinder"] .bm {
+    transform: rotateX(-90deg) translateY(-50%);
+  }
+  [class*="cylinder"] .tp, [class*="cylinder"] .bm, [class*="cylinder"] .tp .photon-shader, [class*="cylinder"] .bm .photon-shader {
+    border-radius: 50%;
+  }
+  [class*="cylinder"] .bm {
+    top: 100%;
+  }
+  /* .mouse styles */
+  .mouse {
+    transform:translate3D(0em, 0em, -0em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity:1;
+    width:9em;
+    height:3em;
+    margin:-1.5em 0 0 -4.5em;
+  }
+  .mouse .ft {
+    transform:translateZ(7.5em);
+  }
+  .mouse .bk {
+    transform:translateZ(-7.5em) rotateY(180deg);
+  }
+  .mouse .rt, .mouse .lt {
+    width:15em;
+    height:3em;
+  }
+  .mouse .tp, .mouse .bm {
+    width:9em;
+    height:15em;
+  }
+  .mouse .face {
+    background-color:#292929;
+  }
+  .mouse .ft {
+    width:5em;
+    margin-left:2em;
+  }
+  .mouse .bk {
+    width:5em;
+    margin-left:-2em;
+  }
+  .mouse .rt, .mouse .lt {
+    width:11em;
+  }
+  .mouse .tp, .mouse .bm, .mouse .tp .photon-shader, .mouse .bm .photon-shader {
+    border-radius:2em;
+  }
+  .mouse .cr {
+    width:2em;
+    left:1em;
+  }
+  .mouse .cr-0 {
+    transform: translate3D(5em, 0, 5.5em);
+  }
+  .mouse .cr-1 {
+    transform: translate3D(5em, 0, -5.5em);
+  }
+  .mouse .cr-2 {
+    transform: translate3D(0, 0, -5.5em);
+  }
+  .mouse .cr-3 {
+    transform: translate3D(0, 0, 5.5em);
+  }
+  .mouse .cr-0 .s0 {
+    transform: rotateY(9deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-0 .s1 {
+    transform: rotateY(27deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-0 .s2 {
+    transform: rotateY(45deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-0 .s3 {
+    transform: rotateY(63deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-0 .s4 {
+    transform: rotateY(81deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-1 .s0 {
+    transform: rotateY(99deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-1 .s1 {
+    transform: rotateY(117deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-1 .s2 {
+    transform: rotateY(135deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-1 .s3 {
+    transform: rotateY(153deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-1 .s4 {
+    transform: rotateY(171deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-2 .s0 {
+    transform: rotateY(189deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-2 .s1 {
+    transform: rotateY(207deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-2 .s2 {
+    transform: rotateY(225deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-2 .s3 {
+    transform: rotateY(243deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-2 .s4 {
+    transform: rotateY(261deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-3 .s0 {
+    transform: rotateY(279deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-3 .s1 {
+    transform: rotateY(297deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-3 .s2 {
+    transform: rotateY(315deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-3 .s3 {
+    transform: rotateY(333deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .cr-3 .s4 {
+    transform: rotateY(351deg) translate3D(-50%, 0, 1.975em);
+  }
+  .mouse .side {
+    width:0.6585377612981451em;
+  }
+  /* .leftBtn styles */
+  .leftBtn {
+    transform:translate3D(-2.6em, -1.2em, -4.3em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity:1;
+    width:3em;
+    height:1.5em;
+    margin:-0.75em 0 0 -1.5em;
+  }
+  .leftBtn .ft {
+    transform:translateZ(2.875em);
+  }
+  .leftBtn .bk {
+    transform:translateZ(-2.875em) rotateY(180deg);
+  }
+  .leftBtn .rt, .leftBtn .lt {
+    width:5.75em;
+    height:1.5em;
+  }
+  .leftBtn .tp, .leftBtn .bm {
+    width:3em;
+    height:5.75em;
+  }
+  .leftBtn .face {
+    background-color:#474747;
+  }
+  .leftBtn .ft {
+    width:1em;
+    margin-left:1em;
+  }
+  .leftBtn .bk {
+    width:1em;
+    margin-left:-1em;
+  }
+  .leftBtn .rt, .leftBtn .lt {
+    width:3.75em;
+  }
+  .leftBtn .tp, .leftBtn .bm, .leftBtn .tp .photon-shader, .leftBtn .bm .photon-shader {
+    border-radius:1em;
+  }
+  .leftBtn .cr {
+    width:1em;
+    left:0.5em;
+  }
+  .leftBtn .cr-0 {
+    transform: translate3D(1em, 0, 1.875em);
+  }
+  .leftBtn .cr-1 {
+    transform: translate3D(1em, 0, -1.875em);
+  }
+  .leftBtn .cr-2 {
+    transform: translate3D(0, 0, -1.875em);
+  }
+  .leftBtn .cr-3 {
+    transform: translate3D(0, 0, 1.875em);
+  }
+  .leftBtn .cr-0 .s0 {
+    transform: rotateY(15deg) translate3D(-50%, 0, 0.975em);
+  }
+  .leftBtn .cr-0 .s1 {
+    transform: rotateY(45deg) translate3D(-50%, 0, 0.975em);
+  }
+  .leftBtn .cr-0 .s2 {
+    transform: rotateY(75deg) translate3D(-50%, 0, 0.975em);
+  }
+  .leftBtn .cr-1 .s0 {
+    transform: rotateY(105deg) translate3D(-50%, 0, 0.975em);
+  }
+  .leftBtn .cr-1 .s1 {
+    transform: rotateY(135deg) translate3D(-50%, 0, 0.975em);
+  }
+  .leftBtn .cr-1 .s2 {
+    transform: rotateY(165deg) translate3D(-50%, 0, 0.975em);
+  }
+  .leftBtn .cr-2 .s0 {
+    transform: rotateY(195deg) translate3D(-50%, 0, 0.975em);
+  }
+  .leftBtn .cr-2 .s1 {
+    transform: rotateY(225deg) translate3D(-50%, 0, 0.975em);
+  }
+  .leftBtn .cr-2 .s2 {
+    transform: rotateY(255deg) translate3D(-50%, 0, 0.975em);
+  }
+  .leftBtn .cr-3 .s0 {
+    transform: rotateY(285deg) translate3D(-50%, 0, 0.975em);
+  }
+  .leftBtn .cr-3 .s1 {
+    transform: rotateY(315deg) translate3D(-50%, 0, 0.975em);
+  }
+  .leftBtn .cr-3 .s2 {
+    transform: rotateY(345deg) translate3D(-50%, 0, 0.975em);
+  }
+  .leftBtn .side {
+    width:0.5608983848622454em;
+  }
+  /* .rightBtn styles */
+  .rightBtn {
+    transform:translate3D(2.6em, -01.2em, -4.3em) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    opacity:1;
+    width:3em;
+    height:1.5em;
+    margin:-0.75em 0 0 -1.5em;
+  }
+  .rightBtn .ft {
+    transform:translateZ(2.875em);
+  }
+  .rightBtn .bk {
+    transform:translateZ(-2.875em) rotateY(180deg);
+  }
+  .rightBtn .rt, .rightBtn .lt {
+    width:5.75em;
+    height:1.5em;
+  }
+  .rightBtn .tp, .rightBtn .bm {
+    width:3em;
+    height:5.75em;
+  }
+  .rightBtn .face {
+    background-color:#474747;
+  }
+  .rightBtn .ft {
+    width:1em;
+    margin-left:1em;
+  }
+  .rightBtn .bk {
+    width:1em;
+    margin-left:-1em;
+  }
+  .rightBtn .rt, .rightBtn .lt {
+    width:3.75em;
+  }
+  .rightBtn .tp, .rightBtn .bm, .rightBtn .tp .photon-shader, .rightBtn .bm .photon-shader {
+    border-radius:1em;
+  }
+  .rightBtn .cr {
+    width:1em;
+    left:0.5em;
+  }
+  .rightBtn .cr-0 {
+    transform: translate3D(1em, 0, 1.875em);
+  }
+  .rightBtn .cr-1 {
+    transform: translate3D(1em, 0, -1.875em);
+  }
+  .rightBtn .cr-2 {
+    transform: translate3D(0, 0, -1.875em);
+  }
+  .rightBtn .cr-3 {
+    transform: translate3D(0, 0, 1.875em);
+  }
+  .rightBtn .cr-0 .s0 {
+    transform: rotateY(15deg) translate3D(-50%, 0, 0.975em);
+  }
+  .rightBtn .cr-0 .s1 {
+    transform: rotateY(45deg) translate3D(-50%, 0, 0.975em);
+  }
+  .rightBtn .cr-0 .s2 {
+    transform: rotateY(75deg) translate3D(-50%, 0, 0.975em);
+  }
+  .rightBtn .cr-1 .s0 {
+    transform: rotateY(105deg) translate3D(-50%, 0, 0.975em);
+  }
+  .rightBtn .cr-1 .s1 {
+    transform: rotateY(135deg) translate3D(-50%, 0, 0.975em);
+  }
+  .rightBtn .cr-1 .s2 {
+    transform: rotateY(165deg) translate3D(-50%, 0, 0.975em);
+  }
+  .rightBtn .cr-2 .s0 {
+    transform: rotateY(195deg) translate3D(-50%, 0, 0.975em);
+  }
+  .rightBtn .cr-2 .s1 {
+    transform: rotateY(225deg) translate3D(-50%, 0, 0.975em);
+  }
+  .rightBtn .cr-2 .s2 {
+    transform: rotateY(255deg) translate3D(-50%, 0, 0.975em);
+  }
+  .rightBtn .cr-3 .s0 {
+    transform: rotateY(285deg) translate3D(-50%, 0, 0.975em);
+  }
+  .rightBtn .cr-3 .s1 {
+    transform: rotateY(315deg) translate3D(-50%, 0, 0.975em);
+  }
+  .rightBtn .cr-3 .s2 {
+    transform: rotateY(345deg) translate3D(-50%, 0, 0.975em);
+  }
+  .rightBtn .side {
+    width:0.5608983848622454em;
+  }
+  /* .scroll styles */
+  .scroll {
+    transform:translate3D(0em, -1em, -4.6em) rotateX(0deg) rotateY(180deg) rotateZ(90deg);
+    opacity:1;
+    width:5em;
+    height:1.8em;
+    margin:-0.9em 0 0 -2.5em;
+  }
+  .scroll .tp, .scroll .bm {
+    width:5em;
+    height:5em;
+  }
+  .scroll .side {
+    width:0.8169222016226814em;
+    height:1.8em;
+  }
+  .scroll .s0 {
+    transform: rotateY(9deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s1 {
+    transform: rotateY(27deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s2 {
+    transform: rotateY(45deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s3 {
+    transform: rotateY(63deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s4 {
+    transform: rotateY(81deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s5 {
+    transform: rotateY(99deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s6 {
+    transform: rotateY(117deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s7 {
+    transform: rotateY(135deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s8 {
+    transform: rotateY(153deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s9 {
+    transform: rotateY(171deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s10 {
+    transform: rotateY(189deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s11 {
+    transform: rotateY(207deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s12 {
+    transform: rotateY(225deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s13 {
+    transform: rotateY(243deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s14 {
+    transform: rotateY(261deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s15 {
+    transform: rotateY(279deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s16 {
+    transform: rotateY(297deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s17 {
+    transform: rotateY(315deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s18 {
+    transform: rotateY(333deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .s19 {
+    transform: rotateY(351deg) translate3D(-50%, 0, 2.475em);
+  }
+  .scroll .face, .scroll .side {
+    background-color:#171717;
+  }
+  /* .cable styles */
+  .cable {
+    transform:translate3D(-0.0625em, -0.1875em, -35.3125em) rotateX(0deg) rotateY(-90deg) rotateZ(90deg);
+    opacity:1;
+    width:0.4em;
+    height:56em;
+    margin:-28em 0 0 -0.2em;
+  }
+  .cable .tp, .cable .bm {
+    width:0.4em;
+    height:0.4em;
+  }
+  .cable .side {
+    width:0.08835377612981452em;
+    height:56em;
+  }
+  .cable .s0 {
+    transform: rotateY(9deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s1 {
+    transform: rotateY(27deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s2 {
+    transform: rotateY(45deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s3 {
+    transform: rotateY(63deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s4 {
+    transform: rotateY(81deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s5 {
+    transform: rotateY(99deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s6 {
+    transform: rotateY(117deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s7 {
+    transform: rotateY(135deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s8 {
+    transform: rotateY(153deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s9 {
+    transform: rotateY(171deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s10 {
+    transform: rotateY(189deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s11 {
+    transform: rotateY(207deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s12 {
+    transform: rotateY(225deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s13 {
+    transform: rotateY(243deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s14 {
+    transform: rotateY(261deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s15 {
+    transform: rotateY(279deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s16 {
+    transform: rotateY(297deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s17 {
+    transform: rotateY(315deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s18 {
+    transform: rotateY(333deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .s19 {
+    transform: rotateY(351deg) translate3D(-50%, 0, 0.17500000000000002em);
+  }
+  .cable .face, .cable .side {
+    background-color:#292929;
+  }
+}
