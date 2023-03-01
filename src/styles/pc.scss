@@ -1,0 +1,90 @@
+.pc{
+    transform-style: preserve-3d;
+    position: absolute;
+    right: 0;
+    transform: translate3D(0px, 100px, 10px);
+
+    & .top{
+        width: 100px;
+        height: 230px;
+        background-color: rgb(31, 31, 31);
+        position: absolute;
+        right: 0;
+        transform: rotateX(90deg) translate3D(-140px, 235px, -5px);
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        padding-bottom: 10px;
+        transform-style: preserve-3d;
+
+        & .power-off{
+            transform-style: preserve-3d;
+            position: absolute;
+            background-color: rgb(27, 27, 27);
+            width: 30px;
+            height: 30px;
+            border-radius: 100%;
+            transform: translate3D(0px, 0px, 0px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 14px;  
+                          
+            & .topIcon{
+                color: rgb(61, 61, 61);
+            }
+
+            & .powerOffCheckbox{
+                display: none;
+            }
+
+            & .powerOffCheckbox:checked ~ .topIcon{
+                color: lime;
+            }
+        }
+        
+    }
+
+    & .front{
+        width: 100px;
+        height: 230px;
+        background-color: rgb(61, 61, 61);
+        position: absolute;
+        right: 0;
+        transform: translate3D(-140px, 120px, 350px);
+
+        & .frontC{
+            width: 100px;
+            height: 135px;
+            background-color: hsl(0, 0%, 20%);
+        }
+    }
+    
+    & .back{
+        width: 100px;
+        height: 230px;
+        background-color: rgb(34, 34, 34);
+        position: absolute;
+        right: 0;
+        transform: translate3D(-140px, 120px, 120px);
+    }
+
+    & .left{
+        width: 230px;
+        height: 230px;
+        background-color: rgb(34, 34, 34);
+        position: absolute;
+        right: 0;
+        transform: rotateY(90deg) translate3D(-235px, 120px, -125px);
+    }
+
+    & .right{
+        width: 230px;
+        height: 230px;
+        background-color: rgb(34, 34, 34);
+        position: absolute;
+        right: 0;
+        transform: rotateY(90deg) translate3D(-235px, 120px, -25px);
+    }
+}

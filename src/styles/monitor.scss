@@ -1,0 +1,179 @@
+.monitors{
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    transform: translate3D(50px, 0, 0);
+
+    & .monitorOne{
+        transform: rotateY(20deg) translate3D(40px, -10px, -20px);
+    }
+
+    & .monitorTwo{
+        transform: rotateY(-10deg) translate3D(40px, -10px, -20px);
+        
+        & .verticalMonitor{
+            transform-style: preserve-3d;
+            transform: rotateZ(90deg) translate3D(40px, 110px, -0px);
+        }
+
+        & .monitorTop{
+            background-color: hsl(0, 0%, 12%) !important;
+        }
+
+        & .monitorLeft{
+            background-color: hsl(0, 0%, 10%) !important;
+        }
+    }
+
+    & .monitor{
+        transform-style: preserve-3d;
+        
+        & .monitorTop{
+            width: 280px;
+            height: 19px;
+            background-color: hsl(0, 0%, 10%);
+            position: absolute;
+            transform: rotateX(90deg) translate3D(-100px, 109px, 30px);
+        }
+
+        & .monitorBottom{
+            width: 280px;
+            height: 19px;
+            background-color: #2B2B2B;
+            position: absolute;
+            transform: rotateX(90deg) translate3D(-100px, 110px, -150px);
+        }
+
+        & .monitorLeft{
+            width: 19px;
+            height: 180px;
+            background-color: hsl(0, 0%, 17%);
+            position: absolute;
+            left: 0;
+            transform: rotateY(90deg) translate3D(-110px, -20px, -109px);
+        }
+
+        & .monitorRight{
+            width: 19px;
+            height: 180px;
+            background-color: hsl(0, 0%, 12%);
+            position: absolute;
+            right: 0;
+            transform: rotateY(90deg) translate3D(-110px, -20px, -90px);
+        }
+
+        & .monitorBack{
+            width: 280px;
+            height: 180px;
+            background-color: #2B2B2B;
+            transform: translate3D(-100px, -20px, 100px);
+        }
+
+        & .monitorFront{
+            top: 0;
+            position: absolute;
+            width: 280px;
+            height: 180px;
+            background-color: #2B2B2B;
+            transform: translate3D(-100px, -20px, 120px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & .screen{
+                width: 265px;
+                height: 165px;
+                background-color: black;
+                border-radius: 5px;
+            }
+
+
+        }
+
+        & .monitorLeg{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: hsl(0, 0%, 8%);
+            right: 0;
+            transform: translate3D(-190px, -90px, 95px);
+            transform-style: preserve-3d;
+
+            & .monitorLegtwo{
+                width: 100px;
+                height: 70px;
+                background-color: #2B2B2B;
+                right: 0;
+                transform: rotateX(90deg) translate3D(0px, 35px, -65px);
+            }
+
+            & .monitorLegthree{
+                position: absolute;
+                width: 100px;
+                height: 70px;
+                background-color: hsl(0, 0%, 18%);
+                right: 0;
+                transform: rotateX(90deg) translate3D(0px, 35px, 10px);
+            }
+
+            & .monitorLegFour{
+                position: absolute;
+                width: 100px;
+                height: 5px;
+                background-color: hsl(0, 0%, 13%);
+                right: 0;
+                transform: translate3D(0px, 25px, 70px);
+            }
+
+            & .monitorLegRight{
+                position: absolute;
+                background-color: hsl(0, 0%, 10%);
+                width: 70px;
+                height: 5px;
+                transform: rotateY(90deg) translate3D(-35px, 25px, 65px);
+            }
+
+            & .monitorLegLeft{
+                position: absolute;
+                background-color: hsl(0, 0%, 13%);
+                width: 70px;
+                height: 5px;
+                transform: rotateY(90deg) translate3D(-35px, 25px, -35px);
+            }
+        }
+
+        & .monitorLegBack{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: hsl(0, 0%, 8%);
+            right: 0;
+            transform: translate3D(-190px, -90px, 100px);
+            transform-style: preserve-3d;
+
+            & .monitorLegtwo{
+                position: absolute;
+                width: 5px;
+                height: 100px;
+                background-color: hsl(0, 0%, 10%);
+                transform: rotateY(90deg) translate3D(2px, -0px, 97.2px);
+            }
+
+            & .monitorLegThree{
+                position: absolute;
+                width: 6px;
+                height: 100px;
+                background-color: hsl(0, 0%, 15%);
+                transform: rotateY(90deg) translate3D(2px, -0px, -2.8px);
+            }
+
+            & .monitorLegFour{
+                width: 100px;
+                height: 6px;
+                background-color: hsl(0, 0%, 10%);
+                position: absolute;
+                transform:rotateX(90deg) translate3D(0px, -2px, 4px);
+            }
+        }
+    }
+}

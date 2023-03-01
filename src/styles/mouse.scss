@@ -11,13 +11,11 @@
   .face {
     box-shadow: inset 0 0 0 1px rgb(29, 29, 29);
   }
-  .scene, .shape, .face, .face-wrapper, .cr {
+  .shape, .face, .face-wrapper, .cr {
     position: absolute;
     transform-style: preserve-3d;
   }
-  .scene {
-    
-  }
+
   .shape {
     top: 50%;
     left: 50%;
@@ -30,7 +28,6 @@
     transform-style: preserve-3d;
     overflow: hidden;
     transform-origin: 0 0;
-    backface-visibility: hidden;
     /* hidden by default, prevent blinking and other weird rendering glitchs */
   }
   .face {

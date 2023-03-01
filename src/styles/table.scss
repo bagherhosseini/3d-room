@@ -1,0 +1,248 @@
+.table{
+    transform-style: preserve-3d;
+    width: 100%;
+    margin-top: 200px;
+    position: absolute;
+}
+
+.tableSides{
+    transform-style: preserve-3d;
+
+    & .tableone {
+        background-color:#402F1D;
+        height: 20px;
+        width: calc(100% - 25px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotateY(180deg) translateZ(-10px);
+        background-image: url('../img/wood04.png');
+    }
+
+    & .tabletwo{
+        background-color:#402F1D;
+        height: 20px;
+        width: calc(100% - 25px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%, -50%) rotateY(0deg) translateZ(400px);
+        background-image: url('../img/wood04.png');
+    }
+
+    & .tablethree{
+        background-color:#402F1D;
+        height:390px;
+        width: calc(100% - 25px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotateX(90deg) translateZ(10px) translateY(205px);
+        background-image: url('../img/wood04.png');
+    }
+
+    & .tablefour{
+        background-color:#402F1D;
+        height: 20px;
+        width: 390px;
+        position: absolute;
+        background-image: url('../img/wood04.png');
+        transform: rotateY(90deg) translateZ(-180px) translateY(-10px) translateX(-205px);
+    }
+
+    & .tablefive{
+        background-color:#402F1D;
+        height: 20px;
+        width: 390px;
+        position: absolute;
+        right: 0;
+        background-image: url('../img/wood04.png');
+        transform: rotateY(90deg) translateZ(182px) translateY(-10px) translateX(-205px);
+    }
+}
+
+.tablelegs{
+    transform-style: preserve-3d;
+
+    & .tablelegOne{
+        transform-style: preserve-3d;
+        transform: translate3D(80px, 160px, 50px);     
+        position: absolute;
+        left: 0;
+    }
+
+    & .tablelegTwo{
+        transform-style: preserve-3d;
+        transform: translate3D(80px, 160px, 350px);     
+        position: absolute;
+        left: 0;
+    }
+
+    & .tablelegThree{
+        transform-style: preserve-3d;
+        transform: translate3D(-80px, 160px, 350px);     
+        position: absolute;
+        right: 0;
+    }
+
+    & .tablelegFour{
+        transform-style: preserve-3d;
+        transform: translate3D(-80px, 160px, 50px);     
+        position: absolute;
+        right: 0;
+    }
+
+    & .tableleg{
+        #tridiv {
+        perspective: 800px;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        font-size: 100%;
+        }
+        .scene, .shape, .face, .face-wrapper, .cr {
+        position: absolute;
+        transform-style: preserve-3d;
+        }
+        .scene {
+        width: 80em;
+        height: 80em;
+        top: 50%;
+        left: 50%;
+        margin: -40em 0 0 -40em;
+        }
+        .shape {
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        transform-origin: 50%;
+        }
+        .face, .face-wrapper {
+        overflow: hidden;
+        transform-origin: 0 0;
+        /* hidden by default, prevent blinking and other weird rendering glitchs */
+        }
+        .face {
+        background-size: 100% 100%!important;
+        background-position: center;
+        }
+        .face-wrapper .face {
+        left: 100%;
+        width: 100%;
+        height: 100%
+        }
+        .photon-shader {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%
+        }
+        .side {
+        left: 50%;
+        }
+        .cr, .cr .side {
+        height: 100%;
+        }
+        [class*="cylinder"] .tp {
+        transform: rotateX(90deg) translateY(-50%);
+        }
+        [class*="cylinder"] .bm {
+        transform: rotateX(-90deg) translateY(-50%);
+        }
+        [class*="cylinder"] .tp, [class*="cylinder"] .bm, [class*="cylinder"] .tp .photon-shader, [class*="cylinder"] .bm .photon-shader {
+        border-radius: 50%;
+        }
+        [class*="cylinder"] .bm {
+        top: 100%;
+        }
+        /* .cyl-1 styles */
+        .cyl-1 {
+        transform:translate3D(0em, 0em, 0em) rotateX(0deg) rotateY(20deg) rotateZ(0deg);
+        opacity:1;
+        width:1.75em;
+        height:19.25em;
+        margin:-9.625em 0 0 -0.875em;
+        }
+        .cyl-1 .tp, .cyl-1 .bm {
+        width:1.75em;
+        height:1.75em;
+        }
+        .cyl-1 .side {
+        width:0.3021727705679385em;
+        height:344px;
+        }
+        .cyl-1 .s0 {
+        transform: rotateY(9deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s1 {
+        transform: rotateY(27deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s2 {
+        transform: rotateY(45deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s3 {
+        transform: rotateY(63deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s4 {
+        transform: rotateY(81deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s5 {
+        transform: rotateY(99deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s6 {
+        transform: rotateY(117deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s7 {
+        transform: rotateY(135deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s8 {
+        transform: rotateY(153deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s9 {
+        transform: rotateY(171deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s10 {
+        transform: rotateY(189deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s11 {
+        transform: rotateY(207deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s12 {
+        transform: rotateY(225deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s13 {
+        transform: rotateY(243deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s14 {
+        transform: rotateY(261deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s15 {
+        transform: rotateY(279deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s16 {
+        transform: rotateY(297deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s17 {
+        transform: rotateY(315deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s18 {
+        transform: rotateY(333deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .s19 {
+        transform: rotateY(351deg) translate3D(-50%, 0, 0.85em);
+        }
+        .cyl-1 .face, .cyl-1 .side {
+        background-color:#FFFFFF;
+        }
+        .cyl-1 .tp {
+        background-color:#1f1f1f;
+        }
+        .cyl-1 .side {
+        background-color:#383333;
+        }
+    }
+}
