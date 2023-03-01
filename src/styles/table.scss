@@ -123,6 +123,8 @@
         .face, .face-wrapper {
         overflow: hidden;
         transform-origin: 0 0;
+        backface-visibility: hidden;
+        -webkit-backface-visibility:hidden;
         /* hidden by default, prevent blinking and other weird rendering glitchs */
         }
         .face {

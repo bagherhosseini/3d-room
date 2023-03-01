@@ -1,5 +1,4 @@
-import Room from './comp/Room';
-import Carpet from './comp/Carpet';
+import Room from './components/Room';
 
 function App() {
   return (

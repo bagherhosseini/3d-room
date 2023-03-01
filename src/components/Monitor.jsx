@@ -1,4 +1,5 @@
 import '../styles/monitor.scss';
+import MonitorScreen from './MonitorScreen'
 
 export default function Monitor() {
     return (
@@ -10,7 +11,9 @@ export default function Monitor() {
                 <div className='monitorRight'></div>
                 <div className='monitorBack'></div>
                 <div className='monitorFront'>
-                    <div className='screen'></div>
+                    <div className='screen'> 
+                        <MonitorScreen></MonitorScreen>
+                    </div>
                 </div>
                 <div className='monitorLeg'>
                     <div className='monitorLegtwo'></div>
