@@ -49,17 +49,11 @@ body{
         background-size: 100% 300px;
     }
 
-    
-
-    
-
     & .mousePadKeyboardMouse{
         transform-style: preserve-3d;
         position: absolute;
         height: 180px;
         width: 500px;
-        
-        
     }
 }
 
@@ -72,3 +66,23 @@ body{
         transform: rotateX(-30deg) rotateY(-360deg);
     }
 }
+
+@media (max-width: 1920px){
+    body{
+        transform: scale(0.77);
+    }
+
+    .content{
+        margin-top: 0 !important;
+    }
+}
+
+// @media (max-width: 1920px){
+//     body{
+//         transform: scale(0.77);
+//     }
+
+//     .content{
+//         margin-top: 0 !important;
+//     }
+// }

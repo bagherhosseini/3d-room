@@ -1,4 +1,4 @@
-import '../styles/style.scss'; 
+import '../styles/main.scss'; 
 import Table from './Table.jsx'
 import Pc from './Pc.jsx'
 import Monitor from './Monitor';
