@@ -4,25 +4,25 @@ export default function Carpet(){
 
     return(
         
-        <div class="carpet">
-            <div class="shape cuboid-1 cub-1">
-            <div class="face ft">
-                <div class="photon-shader" style={{backgroundColor: "rgba(0, 0, 0, 0.118)"}}></div>
+        <div className="carpet">
+            <div className="shape cuboid-1 cub-1">
+            <div className="face ft">
+                <div className="photon-shader" style={{backgroundColor: "rgba(0, 0, 0, 0.118)"}}></div>
             </div>
-            <div class="face bk">
-                <div class="photon-shader" style={{backgroundColor: "rgba(0, 0, 0, 0.482)"}}></div>
+            <div className="face bk">
+                <div className="photon-shader" style={{backgroundColor: "rgba(0, 0, 0, 0.482)"}}></div>
             </div>
-            <div class="face rt">
-                <div class="photon-shader" style={{backgroundColor: "rgba(0, 0, 0, 0.118)"}}></div>
+            <div className="face rt">
+                <div className="photon-shader" style={{backgroundColor: "rgba(0, 0, 0, 0.118)"}}></div>
             </div>
-            <div class="face lt">
-                <div class="photon-shader" style={{backgroundColor: "rgba(0, 0, 0, 0.118)"}}></div>
+            <div className="face lt">
+                <div className="photon-shader" style={{backgroundColor: "rgba(0, 0, 0, 0.118)"}}></div>
             </div>
-            <div class="face bm">
-                <div class="photon-shader" style={{backgroundColor: "rgba(0, 0, 0, 0.118)"}}></div>
+            <div className="face bm">
+                <div className="photon-shader" style={{backgroundColor: "rgba(0, 0, 0, 0.118)"}}></div>
             </div>
-            <div class="face tp">
-                <div class="photon-shader" style={{backgroundColor: "rgba(0, 0, 0, 0.118)"}}></div>
+            <div className="face tp">
+                <div className="photon-shader" style={{backgroundColor: "rgba(0, 0, 0, 0.118)"}}></div>
             </div>
             </div>
         </div>

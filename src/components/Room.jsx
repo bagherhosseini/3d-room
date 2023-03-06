@@ -8,13 +8,19 @@ import Carpet from './Carpet.jsx';
 import Chair from './Chair.jsx';
 import Cat from './Cat.jsx'
 import MousePad from './MousePad';
+import { useState } from 'react';
 
 export default function Room() {
+    const [isMonitorOn, setIsMonitorOn] = useState();
+
+    function handleMonitorToggle(isOn) {
+        setIsMonitorOn(isOn);
+    }
     return (
         <section className='content wall'>
             <Table></Table>
-            <Pc></Pc>
-            <Monitor></Monitor>
+            <Pc onMonitorToggle={handleMonitorToggle}></Pc>
+            <Monitor isOn={isMonitorOn}></Monitor>
             
             <div className='mousePadKeyboardMouse'>
                 <MousePad></MousePad>

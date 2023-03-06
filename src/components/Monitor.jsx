@@ -1,7 +1,7 @@
 import '../styles/monitor.scss';
 import MonitorScreen from './MonitorScreen'
 
-export default function Monitor() {
+export default function Monitor(props) {
     return (
         <div className='monitors monitor'>
             <div className='monitorOne monitor'>
@@ -12,7 +12,7 @@ export default function Monitor() {
                 <div className='monitorBack'></div>
                 <div className='monitorFront'>
                     <div className='screen'> 
-                        <MonitorScreen></MonitorScreen>
+                        <MonitorScreen isOn={props.isOn}></MonitorScreen>
                     </div>
                 </div>
                 <div className='monitorLeg'>
@@ -38,7 +38,9 @@ export default function Monitor() {
                     <div className='monitorRight'></div>
                     <div className='monitorBack'></div>
                     <div className='monitorFront'>
-                        <div className='screen'></div>
+                        <div className='screen'>
+                            <div className={props.isOn ? 'monitorScreenOn' : 'monitorScreenOff'}></div>
+                        </div>
                     </div>
                 </div>
                 
