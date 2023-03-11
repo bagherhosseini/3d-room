@@ -5,7 +5,7 @@ export default function MonitorScreen(props = true) {
         <>
             <p className={props.isOn ? 'monitorScreenOff' : 'pMessage'}>Turn on pc</p>
             <div className={props.isOn ? 'monitorScreen' : 'monitorScreenOff'}>
-                <iframe src="http://localhost:3000/"></iframe>
+                <iframe src="https://bagher.netlify.app/"></iframe>
             </div>
         </>
     );

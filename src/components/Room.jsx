@@ -18,6 +18,9 @@ export default function Room() {
     }
     return (
         <section className='content wall'>
+            <div className='wall'></div>
+            <div className='walltwo'></div>
+            <div className='floor'></div>
             <Table></Table>
             <Pc onMonitorToggle={handleMonitorToggle}></Pc>
             <Monitor isOn={isMonitorOn}></Monitor>
