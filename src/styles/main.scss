@@ -172,6 +172,56 @@ body{
     }
 }
 
+@media (max-height: 1300px){
+    body{
+        transform: scale(0.79);
+    }
+
+    .content{
+        margin-top: 3% !important;
+    }
+}
+
+@media (max-height: 1220px){
+    body{
+        transform: scale(0.75);
+    }
+
+    .content{
+        margin-top: 1% !important;
+    }
+}
+
+@media (max-height: 1150px){
+    body{
+        transform: scale(0.70);
+    }
+
+    .content{
+        margin-top: -1% !important;
+    }
+}
+
+@media (max-height: 1080px){
+    body{
+        transform: scale(0.65);
+    }
+
+    .content{
+        margin-top: -4% !important;
+    }
+}
+
+@media (max-height: 1000px){
+    body{
+        transform: scale(0.60);
+    }
+
+    .content{
+        margin-top: -6% !important;
+    }
+}
+
 @media (max-width: 1920px){
     body{
         transform: scale(0.615);
