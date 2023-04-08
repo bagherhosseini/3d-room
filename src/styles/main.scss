@@ -4,7 +4,6 @@
 	box-sizing: border-box;
 }
 
-
 body{
     background-color: #1A1818;
     display: flex;
@@ -190,5 +189,92 @@ body{
 
     .content{
         margin-top: -11.3% !important;
+    }
+}
+
+@media (max-width: 1400px){
+    body{
+        transform: scale(0.615);
+    }
+
+    .content{
+        margin-top: -5.5% !important;
+        margin-left: 30%;
+    }
+}
+
+@media (max-width: 1000px){
+    .content{
+        margin-top: -5.5% !important;
+        margin-left: 35%;
+    }
+}
+
+
+@media (max-width: 900px){
+    body{
+        transform: scale(0.55);
+    }
+
+    .content{
+        margin-top: -5.5% !important;
+        margin-left: 35%;
+    }
+}
+
+
+@media (max-width: 800px){
+    body{
+        transform: scale(0.45);
+    }
+
+    .content{
+        margin-top: -5.5% !important;
+        margin-left: 35%;
+    }
+}
+
+@media (max-width: 700px){
+    body{
+        transform: scale(0.40);
+    }
+
+    .content{
+        margin-top: -5.5% !important;
+        margin-left: 35%;
+    }
+}
+
+@media (max-width: 570px){
+    body{
+        transform: scale(0.35);
+    }
+
+    .content{
+        margin-top: -5.5% !important;
+        margin-left: 35%;
+    }
+}
+
+
+@media (max-width: 500px){
+    body{
+        transform: scale(0.30);
+    }
+
+    .content{
+        margin-top: -5.5% !important;
+        margin-left: 35%;
+    }
+}
+
+@media (max-width: 430px){
+    body{
+        transform: scale(0.25);
+    }
+
+    .content{
+        margin-top: -5.5% !important;
+        margin-left: 35%;
     }
 }
