@@ -12,7 +12,7 @@ import { useState } from 'react';
 
 export default function Room() {
     const [isMonitorOn, setIsMonitorOn] = useState();
-
+    const currentYear = new Date().getFullYear();
     function handleMonitorToggle(isOn) {
         setIsMonitorOn(isOn);
     }
@@ -20,7 +20,9 @@ export default function Room() {
         <section className='content wall'>
             <div className='wall'></div>
             <div className='walltwo'></div>
-            <div className='floor'></div>
+            <div className='floor'>
+                <p className='Copyright'>Copyright <span>&copy;</span> {currentYear} </p>
+            </div>
             <Table></Table>
             <Pc onMonitorToggle={handleMonitorToggle}></Pc>
             <Monitor isOn={isMonitorOn}></Monitor>
@@ -34,6 +36,7 @@ export default function Room() {
             <Carpet></Carpet>
             <Chair></Chair>
             <Cat></Cat>
+            
         </section>
     );
 }
