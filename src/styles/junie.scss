@@ -1,13 +1,13 @@
-.cat {
+.junie {
     position: absolute;
     transform-style: preserve-3d;
     left: 0;
-    transform: rotateY(90deg) translate3d(-200px, -130px, 7px);
+    transform: rotateY(90deg) translate3d(-400px, -130px, 7px);
     font-size: 10px;
   .face {
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.4);
   }
-  .cat, .shape, .face, .face-wrapper, .cr {
+  .junie, .shape, .face, .face-wrapper, .cr {
     position: absolute;
     transform-style: preserve-3d;
   }
@@ -194,6 +194,6 @@
     background-color:#0d0d0d;
   }
   .cub-2 .ft {
-    background:url(../img/animation.png);
+    background:url(../img/junie.jpg);
   }
 }

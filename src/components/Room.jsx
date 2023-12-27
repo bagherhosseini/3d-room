@@ -9,6 +9,7 @@ import Chair from './Chair.jsx';
 import Cat from './Cat.jsx'
 import MousePad from './MousePad';
 import { useState } from 'react';
+import Junie from './Junie.jsx';
 
 export default function Room() {
     const [isMonitorOn, setIsMonitorOn] = useState();
@@ -36,7 +37,7 @@ export default function Room() {
             <Carpet></Carpet>
             <Chair></Chair>
             <Cat></Cat>
-            
+            <Junie></Junie>
         </section>
     );
 }
